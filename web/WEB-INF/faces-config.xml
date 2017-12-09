@@ -19,12 +19,12 @@
         <description>Navigation</description>
         <display-name>tableNawigation</display-name>
         <navigation-case>
-            <from-outcome>tableDaneViewAlias</from-outcome>
-            <to-view-id>views/tableDaneView.xhtml</to-view-id>            
+            <from-outcome>tableDataViewAlias</from-outcome>
+            <to-view-id>views/tableDataView.xhtml</to-view-id>            
         </navigation-case>  
         <navigation-case>
-            <from-outcome>tableUzytkownikViewAlias</from-outcome>
-            <to-view-id>views/tableUzytkownikView.xhtml</to-view-id>            
+            <from-outcome>tableUserViewAlias</from-outcome>
+            <to-view-id>views/tableUserView.xhtml</to-view-id>            
         </navigation-case>   
         <navigation-case>
             <from-outcome>logoutWindowAlias</from-outcome>
@@ -32,13 +32,13 @@
         </navigation-case>            
     </navigation-rule>
     <managed-bean>
-        <managed-bean-name>sessionControllerUzytkownik</managed-bean-name>
-        <managed-bean-class>pl.application.controllers.SessionControllerUzytkownik</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
+        <managed-bean-name>sessionControllerUser</managed-bean-name>
+        <managed-bean-class>pl.application.controllers.SessionControllerUser</managed-bean-class>
+    
+        <managed-bean-scope>session</managed-bean-scope></managed-bean>
     <managed-bean>
-        <managed-bean-name>sessionControllerDane</managed-bean-name>
-        <managed-bean-class>pl.application.controllers.SessionControllerDane</managed-bean-class>
-        <managed-bean-scope>session</managed-bean-scope>
-    </managed-bean>
+        <managed-bean-name>sessionControllerData</managed-bean-name>
+        <managed-bean-class>pl.application.controllers.SessionControllerData</managed-bean-class>
+    
+        <managed-bean-scope>session</managed-bean-scope></managed-bean>
 </faces-config>

@@ -1,7 +1,7 @@
 package pl.application.to;
 
 //Klasa reprezentująca pobieranie danych z tabeli t_uzytkownik
-public class UzytkownikTo {
+public class UserTo {
 
     private Long id;
     private String name;
@@ -9,10 +9,10 @@ public class UzytkownikTo {
     private String description;
     private boolean edited;
 
-    public UzytkownikTo() {
+    public UserTo() {
     }
 
-    public UzytkownikTo(Long id, String name, String surname, String description, boolean edited) {
+    public UserTo(Long id, String name, String surname, String description, boolean edited) {
         this.id = id;
         this.name = name;
         this.surname = surname;

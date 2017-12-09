@@ -11,19 +11,19 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class SessionController {
 
-    private final String tableDaneViewAlias = "tableDaneViewAlias";
-    private final String tableUzytkownikViewAlias = "tableUzytkownikViewAlias";
+    private final String tableDataViewAlias = "tableDataViewAlias";
+    private final String tableUserViewAlias = "tableUserViewAlias";
     private final String logoutWindowAlias = "logoutWindowAlias";
 
     public SessionController() {
     }
 
-    public String getTableDaneViewAlias() {
-        return tableDaneViewAlias;
+    public String getTableDataViewAlias() {
+        return tableDataViewAlias;
     }
     
-    public String getTableUzytkownikViewAlias() {
-        return tableUzytkownikViewAlias;
+    public String getTableUserViewAlias() {
+        return tableUserViewAlias;
     }
     
     public String getLogoutWindowAlias() {

@@ -1,7 +1,7 @@
 package pl.application.to;
 
 //Klasa reprezentująca pobieranie danych z tabeli t_dane
-public class DaneTo 
+public class DataTo 
 {
     private Long id;
     private String nr;
@@ -10,10 +10,10 @@ public class DaneTo
     private float amount;
     private boolean edited;
 
-    public DaneTo() {
+    public DataTo() {
     }
 
-    public DaneTo(Long id, String nr, String title, String description, float amount, boolean edited) {
+    public DataTo(Long id, String nr, String title, String description, float amount, boolean edited) {
         this.id = id;
         this.nr = nr;
         this.title = title;

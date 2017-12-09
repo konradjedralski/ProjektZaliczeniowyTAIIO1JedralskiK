@@ -1,7 +1,7 @@
 package pl.application.dao;
 
 
-public class UzytkownikDao 
+public class DataDao 
 {
 
 }
