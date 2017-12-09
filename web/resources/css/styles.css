@@ -1,0 +1,28 @@
+#mainWindow {
+background-image: url("images/background.jpg");
+}
+#logonError{
+	color: red;
+	font-size: 25;
+	font-weight: 800;
+}
+#menu{
+	color: white;
+}
+.textTitle{
+	font-weight: bold;
+	text-decoration: underline;
+}
+.text{
+	font-weight: bold;
+}
+.link{
+	text-decoration: none;	
+}
+.link:hover{
+	text-decoration: underline;
+	color: white;
+}
+.background{
+	background-image: url("images/backgroundAll.jpg");
+}

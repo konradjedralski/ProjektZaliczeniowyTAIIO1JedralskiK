@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>messages</base-name>
+            <var>msgs</var>
+        </resource-bundle>
+        <locale-config>
+            <default-locale>pl</default-locale>
+            <supported-locale>pl</supported-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+    </application>
+    
+    <navigation-rule>
+        <description>Navigation</description>
+        <display-name>tableNawigation</display-name>
+        <navigation-case>
+            <from-outcome>tableDaneViewAlias</from-outcome>
+            <to-view-id>views/tableDaneView.xhtml</to-view-id>            
+        </navigation-case>  
+        <navigation-case>
+            <from-outcome>tableUzytkownikViewAlias</from-outcome>
+            <to-view-id>views/tableUzytkownikView.xhtml</to-view-id>            
+        </navigation-case>   
+        <navigation-case>
+            <from-outcome>logoutWindowAlias</from-outcome>
+            <to-view-id>logoutWindow.xhtml</to-view-id>            
+        </navigation-case>            
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>sessionControllerUzytkownik</managed-bean-name>
+        <managed-bean-class>pl.application.controllers.SessionControllerUzytkownik</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>sessionControllerDane</managed-bean-name>
+        <managed-bean-class>pl.application.controllers.SessionControllerDane</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+</faces-config>
