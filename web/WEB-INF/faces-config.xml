@@ -32,13 +32,15 @@
         </navigation-case>            
     </navigation-rule>
     <managed-bean>
-        <managed-bean-name>sessionControllerUser</managed-bean-name>
-        <managed-bean-class>pl.application.controllers.SessionControllerUser</managed-bean-class>
+        <managed-bean-name>viewControllerUser</managed-bean-name>
+        <managed-bean-class>pl.application.controllers.ViewControllerUser</managed-bean-class>
     
-        <managed-bean-scope>session</managed-bean-scope></managed-bean>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
     <managed-bean>
-        <managed-bean-name>sessionControllerData</managed-bean-name>
-        <managed-bean-class>pl.application.controllers.SessionControllerData</managed-bean-class>
+        <managed-bean-name>viewControllerData</managed-bean-name>
+        <managed-bean-class>pl.application.controllers.ViewControllerData</managed-bean-class>
     
-        <managed-bean-scope>session</managed-bean-scope></managed-bean>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
 </faces-config>

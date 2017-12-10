@@ -1,12 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>#{msgs.tableUserView}</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
     </h:head>
     <h:body>
-        UserTable
+        <h:form>
+            <h:dataTable value="#{viewControllerUser.userToList}" var="userList" bgcolor="darkgoldenrod" border="3" cellspacing="2"
+                         rows="0" captionClass="warningMessage" footerClass="errorMessage" rowClasses="oddRow, evenRow" >
+                <h:column>
+                    <f:facet name="header">#{msgs.id}</f:facet>
+                    <h:outputText value="#{userList.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{msgs.name}</f:facet>
+                    <h:inputText value="#{userList.name}" rendered="#{userList.edited}"/>
+                    <h:outputText value="#{userList.name}" rendered="#{not userList.edited}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{msgs.surname}</f:facet>
+                    <h:inputText value="#{userList.surname}" rendered="#{userList.edited}"/>
+                    <h:outputText value="#{userList.surname}" rendered="#{not userList.edited}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">#{msgs.description}</f:facet>
+                    <h:inputText value="#{userList.description}" rendered="#{userList.edited}"/>
+                    <h:outputText value="#{userList.description}" rendered="#{not userList.edited}"/>
+                </h:column>
+                <h:column id="edition">
+                    <f:facet name="header">#{msgs.edition}</f:facet>
+                    <h:selectBooleanCheckbox id="editCheckBox" value="#{userList.edited}" rendered="true">
+                        <f:ajax listener="#{viewControllerUser.editionRow(userList)}" execute="@form" render="@form"/>
+                    </h:selectBooleanCheckbox>
+                    <h:commandButton id="addRow" value="#{msgs.addRow}">
+                        <f:ajax listener="#{viewControllerUser.addRow(userList)}" execute="@form" render="@form"/>
+                    </h:commandButton>
+                    <h:commandButton id="deleteRow" value="#{msgs.deleteRow}">
+                        <f:ajax listener="#{viewControllerUser.deleteRow(userList)}" execute="@form" render="@form"/>
+                    </h:commandButton>
+                </h:column>
+            </h:dataTable>
+        </h:form>
     </h:body>
 </html>
 

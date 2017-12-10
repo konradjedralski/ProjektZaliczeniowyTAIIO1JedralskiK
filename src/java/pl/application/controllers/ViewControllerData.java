@@ -6,9 +6,9 @@ package pl.application.controllers;
  *
  * Komponent zarządzany w faces-config
  */
-public class SessionControllerData {
+public class ViewControllerData {
 
-    public SessionControllerData() {
+    public ViewControllerData() {
     }
 
 }

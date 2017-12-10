@@ -26,3 +26,25 @@ background-image: url("images/background.jpg");
 .background{
 	background-image: url("images/backgroundAll.jpg");
 }
+
+.root {
+	display: block;
+}
+.errorMessage {
+	font-style: italic;
+	color: red;
+}
+.warningMessage {
+	font-style: normal;
+	color: green;
+}
+.oddRow {
+	height: 30px;
+	text-align: center;
+	background: khaki;
+}
+.evenRow {
+	height: 30px;
+	text-align: center;
+	background: darkkhaki;
+}
