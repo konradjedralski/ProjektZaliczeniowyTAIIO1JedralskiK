@@ -43,6 +43,9 @@
                     </h:commandButton>
                 </h:column>
             </h:dataTable>
+            <h:commandButton value="Odśwież dane" action="#{viewControllerUser.refleshData()}">
+                <f:ajax listener="#{viewControllerUser.refleshData()}" render="@form"/>
+            </h:commandButton>
         </h:form>
     </h:body>
 </html>
