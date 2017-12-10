@@ -1,4 +1,4 @@
-#mainWindow {
+.mainBackground {
 background-image: url("images/background.jpg");
 }
 #logonError{
@@ -8,6 +8,7 @@ background-image: url("images/background.jpg");
 }
 #menu{
 	color: white;
+	font-size: 25;
 }
 .textTitle{
 	font-weight: bold;
@@ -17,18 +18,19 @@ background-image: url("images/background.jpg");
 	font-weight: bold;
 }
 .link{
-	text-decoration: none;	
+	text-decoration: none;
+    font-size:25;	
 }
 .link:hover{
 	text-decoration: underline;
 	color: white;
 }
+.version{	
+	color: white;
+    float: right;	
+}
 .background{
 	background-image: url("images/backgroundAll.jpg");
-}
-
-.root {
-	display: block;
 }
 .errorMessage {
 	font-style: italic;
@@ -41,10 +43,16 @@ background-image: url("images/background.jpg");
 .oddRow {
 	height: 30px;
 	text-align: center;
-	background: khaki;
+	background: khaki;	
 }
 .evenRow {
 	height: 30px;
 	text-align: center;
-	background: darkkhaki;
+	background: darkkhaki;	
+}
+.table{
+	position:absolute;
+    top: 5%; 
+    left: 5%;
+    right: auto;
 }

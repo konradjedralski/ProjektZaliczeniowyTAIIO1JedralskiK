@@ -6,7 +6,7 @@
         <title>#{msgs.mainWindow}</title>
         <h:outputStylesheet library="css" name="styles.css"/>
     </h:head>
-    <h:body id="mainWindow">
+    <h:body class="mainBackground">
         <h:form> 
             <table align="left">
                 <tr id="menu" class="textTitle">
@@ -20,9 +20,10 @@
                 </tr>
                 <tr>
                     <td><h:link class="link" value="#{msgs.logout}" outcome="#{sessionController.logoutWindowAlias}"/></td>
-                </tr>
-            </table>
-        </h:form>
+                </tr>                
+            </table> 
+            <h:outputText class="version" value="#{sessionController.getDataFromReference()}"/>
+        </h:form>        
     </h:body>
 </html>
 

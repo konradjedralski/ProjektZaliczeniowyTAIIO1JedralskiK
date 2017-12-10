@@ -5,14 +5,24 @@ import javax.faces.bean.ApplicationScoped;
 
 /**
  *
- * @author Konrad 
+ * @author Konrad
  */
 @ManagedBean
 @ApplicationScoped
 public class ApplicationController {
 
-    
+    String appVariable = "Version 1.0.0";
+
     public ApplicationController() {
     }
 
+    public String getAppVariable() {
+        return appVariable;
+    }
+
+    public void setAppVariable(String appVariable) {
+        this.appVariable = appVariable;
+    }
+
+    
 }

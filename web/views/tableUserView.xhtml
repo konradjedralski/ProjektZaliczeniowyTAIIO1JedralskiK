@@ -7,8 +7,8 @@
         <title>#{msgs.tableUserView}</title>
         <h:outputStylesheet library="css" name="styles.css"/>
     </h:head>
-    <h:body>
-        <h:form>
+    <h:body class="mainBackground">
+        <h:form class="table">            
             <h:dataTable value="#{viewControllerUser.userToList}" var="userList" bgcolor="darkgoldenrod" border="3" cellspacing="2"
                          rows="0" captionClass="warningMessage" footerClass="errorMessage" rowClasses="oddRow, evenRow" >
                 <h:column>
@@ -42,10 +42,10 @@
                         <f:ajax listener="#{viewControllerUser.deleteRow(userList)}" execute="@form" render="@form"/>
                     </h:commandButton>
                 </h:column>
-            </h:dataTable>
+            </h:dataTable>                
             <h:commandButton value="Odśwież dane" action="#{viewControllerUser.refleshData()}">
                 <f:ajax listener="#{viewControllerUser.refleshData()}" render="@form"/>
-            </h:commandButton>
+            </h:commandButton>            
         </h:form>
     </h:body>
 </html>
