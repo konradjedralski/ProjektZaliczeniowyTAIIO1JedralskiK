@@ -59,6 +59,5 @@ public class UserTo {
     public void setEdited(boolean edited) {
         this.edited = edited;
     }
-    
-   
+
 }

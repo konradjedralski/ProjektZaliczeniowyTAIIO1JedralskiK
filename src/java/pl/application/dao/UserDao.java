@@ -1,7 +1,5 @@
 package pl.application.dao;
 
-
-public class UserDao 
-{
+public class UserDao {
 
 }
