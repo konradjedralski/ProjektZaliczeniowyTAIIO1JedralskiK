@@ -4,13 +4,14 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>#{msgs.tableUserView}</title>
+        <title>#{msgs.tableUser}</title>
         <h:outputStylesheet library="css" name="styles.css"/>
     </h:head>
     <h:body class="mainBackground">
         <h:form class="table">            
             <h:dataTable value="#{viewControllerUser.userToList}" var="userList" bgcolor="darkgoldenrod" border="3" cellspacing="2"
                          rows="0" captionClass="warningMessage" footerClass="errorMessage" rowClasses="oddRow, evenRow" >
+                <f:facet name="header">#{msgs.tableUser}</f:facet>
                 <h:column>
                     <f:facet name="header">#{msgs.id}</f:facet>
                     <h:outputText value="#{userList.id}"/>
@@ -43,9 +44,9 @@
                     </h:commandButton>
                 </h:column>
             </h:dataTable>                
-            <h:commandButton value="Odśwież dane" action="#{viewControllerUser.refleshData()}">
+            <h:commandButton value="#{msgs.refleshData}" action="#{viewControllerUser.refleshData()}">
                 <f:ajax listener="#{viewControllerUser.refleshData()}" render="@form"/>
-            </h:commandButton>            
+            </h:commandButton>             
         </h:form>
     </h:body>
 </html>

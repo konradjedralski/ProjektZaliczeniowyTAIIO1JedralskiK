@@ -49,7 +49,7 @@ public class UserDao {
             return null;
         }
     }
-    
+
     public Long create(UserTo userTo) {
         Long userToId;
         try {
@@ -77,8 +77,8 @@ public class UserDao {
             }
         }
     }
-    
-     public Long delete(Long id) {
+
+    public Long delete(Long id) {
         try {
             PreparedStatement question = connection.prepareStatement(SQL_DELETE);
             question.setLong(1, id);
@@ -100,8 +100,8 @@ public class UserDao {
             }
         }
     }
-     
-     public Long update(UserTo userTo) {
+
+    public Long update(UserTo userTo) {
         try {
             PreparedStatement question = connection.prepareStatement(SQL_UPDATE);
             question.setLong(1, userTo.getId());
@@ -127,14 +127,14 @@ public class UserDao {
             }
         }
     }
-     
-     public ArrayList<UserTo> allData() {
+
+    public ArrayList<UserTo> allData() {
         try {
             ArrayList<UserTo> userToList = new ArrayList();
             ResultSet question = connection.prepareStatement(SQL_SELECT_ALL, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY).executeQuery();
             boolean lineTrue = question.first();
             while (lineTrue) {
-                userToList.add(new UserTo(question.getLong("id"), question.getString("imie"), question.getString("nazwisko"), question.getString("opis") , false));
+                userToList.add(new UserTo(question.getLong("id"), question.getString("imie"), question.getString("nazwisko"), question.getString("opis"), false));
                 lineTrue = question.next();
             }
             return userToList;

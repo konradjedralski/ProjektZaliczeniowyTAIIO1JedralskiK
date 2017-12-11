@@ -15,6 +15,7 @@ public class SessionController {
     private final String tableDataViewAlias = "tableDataViewAlias";
     private final String tableUserViewAlias = "tableUserViewAlias";
     private final String logoutWindowAlias = "logoutWindowAlias";
+    private final String mainWindowAlias = "mainWindowAlias";
 
     //Wstrzyknięcie ApplicationController do SessionController
     @ManagedProperty(value = "#{applicationController}")
@@ -33,6 +34,10 @@ public class SessionController {
 
     public String getLogoutWindowAlias() {
         return logoutWindowAlias;
+    }
+
+    public String getMainWindowAlias() {
+        return mainWindowAlias;
     }
 
     public void setApplicationControllerReference(ApplicationController applicationControllerReference) {

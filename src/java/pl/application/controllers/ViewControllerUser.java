@@ -26,7 +26,7 @@ public class ViewControllerUser {
     public void setUserToList(List<UserTo> userToList) {
         this.userToList = userToList;
     }
-    
+
     //Odświeżenie danych w tabeli
     public final void refleshData() {
         UserDao daneDao = new UserDao();
@@ -46,7 +46,7 @@ public class ViewControllerUser {
         }
     }
 
-     //Usunięcie aktualnego wiersza i zapis do bazy
+    //Usunięcie aktualnego wiersza i zapis do bazy
     public void deleteRow(UserTo userTo) {
         int indexObject = userToList.indexOf(userTo);
         UserDao dataDao = new UserDao();
@@ -58,7 +58,6 @@ public class ViewControllerUser {
     //Dodanie nowego pustego wiersza w trybie edycji i zapis do bazy
     public void addRow(UserTo userTo) {
         int indexObject = userToList.indexOf(userTo);
-        int listSize = userToList.size();
         UserTo newRow = new UserTo(-1l, "", "", "", true);
         UserDao dataDao = new UserDao();
         Long id = dataDao.create(newRow);

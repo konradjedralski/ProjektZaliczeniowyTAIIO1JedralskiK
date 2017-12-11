@@ -29,7 +29,11 @@
         <navigation-case>
             <from-outcome>logoutWindowAlias</from-outcome>
             <to-view-id>logoutWindow.xhtml</to-view-id>            
-        </navigation-case>            
+        </navigation-case>  
+        <navigation-case>
+            <from-outcome>mainWindowAlias</from-outcome>
+            <to-view-id>mainWindow.xhtml</to-view-id>            
+        </navigation-case>           
     </navigation-rule>
     <managed-bean>
         <managed-bean-name>viewControllerUser</managed-bean-name>
