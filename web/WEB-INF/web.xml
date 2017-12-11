@@ -17,6 +17,9 @@
         <session-timeout>
             30
         </session-timeout>
+        <session-properties>
+            <property name="enableCookies" value="false"/>
+        </session-properties>
     </session-config>
     <welcome-file-list>
         <welcome-file>faces/views/mainWindow.xhtml</welcome-file>

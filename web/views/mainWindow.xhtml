@@ -8,7 +8,7 @@
     </h:head>
     <h:body class="mainBackground">
         <h:form> 
-            <table align="left">
+            <table class="tableMenu">
                 <tr id="menu" class="textTitle">
                     <td>#{msgs.menu}</td>
                 </tr>
@@ -22,7 +22,13 @@
                     <td><h:link class="link" value="#{msgs.logout}" outcome="#{sessionController.logoutWindowAlias}"/></td>
                 </tr>                
             </table> 
-            <h:outputText class="version" value="#{sessionController.getDataFromReference()}"/>
+            <h:outputText class="version" value="#{sessionController.getDataFromReference()}"/> 
+            <div class="welcome">
+                #{msgs.welcome}
+            </div>
+            <div class="welcomeImage">
+                <h:graphicImage class="imageSize" name="welcome.png" library="images"/>
+            </div>
         </h:form>        
     </h:body>
 </html>

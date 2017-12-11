@@ -1,14 +1,16 @@
 .mainBackground {
-background-image: url("images/background.jpg");
+	background-image: url("images/background.jpg");
+	margin: 0; 
+	padding: 0;
 }
 #logonError{
 	color: red;
-	font-size: 25;
+	font-size: 25px;
 	font-weight: 800;
 }
 #menu{
 	color: white;
-	font-size: 25;
+	font-size: 30px;
 }
 .textTitle{
 	font-weight: bold;
@@ -19,15 +21,42 @@ background-image: url("images/background.jpg");
 }
 .link{
 	text-decoration: none;
-    font-size:25;	
+    font-size: 27px;
+	color: steelblue;	
 }
 .link:hover{
 	text-decoration: underline;
 	color: white;
 }
 .version{	
+	position: absolute;
 	color: white;
-    float: right;	
+	font-size: 18px;
+    bottom: 3px;
+    right: 5px;	
+}
+.welcome{
+	position: relative;
+	font-size: 25px;
+	font-weight: bold;
+	color: silver;
+	text-align: center;
+	top: 145px;
+}
+.imageSize{
+	width: 350px;
+	height: 150px;
+}
+.welcomeImage{	
+	position: relative;
+	top: 0px;
+	text-align: center;
+	margin-top: -30px;
+}
+.tableMenu{
+	position: absolute;
+	float: left;
+	top: 180px;
 }
 .background{
 	background-image: url("images/backgroundAll.jpg");
@@ -41,18 +70,29 @@ background-image: url("images/background.jpg");
 	color: green;
 }
 .oddRow {
-	height: 30px;
+	height: 35px;
 	text-align: center;
 	background: khaki;	
 }
 .evenRow {
-	height: 30px;
+	height: 35px;
 	text-align: center;
 	background: darkkhaki;	
 }
+.rows {
+	height: 35px;
+	text-align: center;
+}
 .table{
-	position:absolute;
+	position: absolute;
     top: 5%; 
-    left: 5%;
+    left: 20%;
     right: auto;
+}
+.returnButton{
+	position: absolute;
+	width: 200px; 
+	height: 40px;
+	bottom: 15px;
+    left: 15px;
 }

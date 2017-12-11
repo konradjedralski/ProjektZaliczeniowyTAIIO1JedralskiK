@@ -9,7 +9,8 @@
     </h:head>
     <h:body class="mainBackground">
         <h:form class="table">
-            <h:dataTable value="#{viewControllerData.dataToList}" var="dataList" bgcolor="LightBlue" border="3" cellspacing="2">
+            <h:dataTable value="#{viewControllerData.dataToList}" var="dataList" bgcolor="LightBlue" border="3" cellspacing="2"
+                         rows="0" captionClass="warningMessage" footerClass="errorMessage" rowClasses="rows" >
                 <f:facet name="header">#{msgs.tableData}</f:facet>
                 <h:column>
                     <f:facet name="header" >#{msgs.id}</f:facet>
@@ -41,11 +42,11 @@
                     <h:commandButton id="addRow" value="#{msgs.addRow}"  action="#{viewControllerData.addRow(dataList)}"/>
                     <h:commandButton id="saveData" value="#{msgs.saveData}" action="#{viewControllerData.saveData(dataList)}"/>
                     <h:commandButton id="delRow" value="#{msgs.deleteRow}" action="#{viewControllerData.deleteRow(dataList)}"/> 
-                    
-                </h:column>
-            </h:dataTable>
-            <h:commandButton value="#{msgs.refleshData}" action="#{viewControllerData.refleshData()}"/>            
+                </h:column>                
+            </h:dataTable> 
+            <h:commandButton value="#{msgs.refleshData}" action="#{viewControllerData.refleshData()}"/>              
         </h:form>
+        <h:button class="returnButton" value="#{msgs.returnMain}" outcome="#{sessionController.mainWindowAlias}"/>
     </h:body>
 </html>
 

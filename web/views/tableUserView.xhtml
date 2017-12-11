@@ -46,8 +46,9 @@
             </h:dataTable>                
             <h:commandButton value="#{msgs.refleshData}" action="#{viewControllerUser.refleshData()}">
                 <f:ajax listener="#{viewControllerUser.refleshData()}" render="@form"/>
-            </h:commandButton>             
+            </h:commandButton>       
         </h:form>
+        <h:button class="returnButton" value="#{msgs.returnMain}" outcome="#{sessionController.mainWindowAlias}"/>
     </h:body>
 </html>
 
